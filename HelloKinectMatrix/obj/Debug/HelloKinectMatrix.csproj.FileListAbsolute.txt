@@ -1,0 +1,6 @@
+c:\users\yy\documents\visual studio 2012\Projects\HelloKinectMatrix\HelloKinectMatrix\bin\Debug\HelloKinectMatrix.exe.config
+c:\users\yy\documents\visual studio 2012\Projects\HelloKinectMatrix\HelloKinectMatrix\bin\Debug\HelloKinectMatrix.exe
+c:\users\yy\documents\visual studio 2012\Projects\HelloKinectMatrix\HelloKinectMatrix\bin\Debug\HelloKinectMatrix.pdb
+c:\users\yy\documents\visual studio 2012\Projects\HelloKinectMatrix\HelloKinectMatrix\obj\Debug\HelloKinectMatrix.csprojResolveAssemblyReference.cache
+c:\users\yy\documents\visual studio 2012\Projects\HelloKinectMatrix\HelloKinectMatrix\obj\Debug\HelloKinectMatrix.exe
+c:\users\yy\documents\visual studio 2012\Projects\HelloKinectMatrix\HelloKinectMatrix\obj\Debug\HelloKinectMatrix.pdb
