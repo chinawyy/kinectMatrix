@@ -1,0 +1,40 @@
+﻿<Window x:Class="KinectHubDemo.MainWindow"
+        WindowState="Maximized"
+        WindowStyle="SingleBorderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        Background="#1C4A57"
+		xmlns:Controls="clr-namespace:Coding4Fun.Kinect.Wpf.Controls;assembly=Coding4Fun.Kinect.Wpf"
+		Title="Kinect Hub Demo" Height="800" Width="1280" Loaded="Window_Loaded" Closing="Window_Closing">
+	<Grid x:Name="theGrid">
+		<Canvas Background="Transparent" DataContext="{Binding}" Loaded="Canvas_Loaded">
+			<Controls:HoverButton Margin="0" Padding="0" x:Name="kinectButton" ImageSize="64"                                           
+                                ImageSource="/Resources/Hand_Basic.png"  
+                                ActiveImageSource="/Resources/Hand_Basic.png" 
+                                TimeInterval="2000"  Canvas.Left="525" Canvas.Top="32" Panel.ZIndex="1000" />
+
+			<TextBlock Canvas.Left="322" Canvas.Top="32" FontSize="46" Foreground="White" Height="101" Name="textBlock3" Text="Welcome to wyy world" Width="645" />
+<Button Canvas.Left="45" Canvas.Top="118" Height="300" Name="button1" Width="335" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button1_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/KinectUserInterfaceDemo;component/Resources/images/start.jpg" />
+                </Button.Background>
+            </Button>
+<Button Canvas.Left="455" Canvas.Top="115" Height="300" Name="button2" Width="335" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button2_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/KinectUserInterfaceDemo;component/Resources/images/end.jpg" />
+                </Button.Background>
+            </Button>
+<Button Canvas.Left="853" Canvas.Top="112" Height="300" Name="button3" Width="335" 
+		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button3_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/KinectUserInterfaceDemo;component/Resources/images/explore.jpg" />
+                </Button.Background>
+            </Button>
+
+            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="textTip" Text="The current scenery" Width="289" Canvas.Left="899" Canvas.Top="451" />
+            <Image Name="videoImage" Height="166" Width="289" Canvas.Left="899" Canvas.Top="491"></Image>
+            <ListBox Canvas.Left="41" Canvas.Top="464" Height="128" Name="listBoxHoverEvent" Width="339" Background="#FF1E1C37" Foreground="#FF20ED16" />
+        </Canvas>
+    </Grid>
+
+</Window>

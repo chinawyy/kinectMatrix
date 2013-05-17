@@ -1,0 +1,13 @@
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectUserInterfaceDemo.exe
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\KinectUserInterfaceDemo.exe
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Expression.Drawing.xml
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\MainWindow.baml
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\MainWindow.g.cs
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\App.g.cs
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectHubDemo.Properties.Resources.resources
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\wyyWorld.csproj.GenerateResource.Cache

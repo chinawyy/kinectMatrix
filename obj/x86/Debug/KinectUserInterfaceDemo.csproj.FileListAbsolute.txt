@@ -1,0 +1,45 @@
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.baml
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.g.cs
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\App.g.cs
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.Properties.Resources.resources
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+D:\Development Tools\Kinect\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.baml
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.g.cs
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\App.g.cs
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.Properties.Resources.resources
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\SOLUTION BOX\kinect\1.0 projects\Migrated 3\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.exe
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.pdb
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.exe
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\KinectUserInterfaceDemo.pdb
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.baml
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\MainWindow.g.cs
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\App.g.cs
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\KinectUserInterfaceDemo.Properties.Resources.resources
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Kinect Project\脚手架\kinectbuttonpress1\KinectUserInterfaceDemo\obj\x86\Debug\GenerateResource.write.1.tlog
