@@ -1,4 +1,0 @@
-kinectMatrix
-============
-
-First Kinect progrm

@@ -1,0 +1,6 @@
+In The program,I hope to give a new way to show PPT.And I can give a new face to the program.
+
+完成：
+1.实现我的PPT播放功能（手势和口语）
+2. 语音控制页面选择
+3. 实现我的切换面部，将面具切换为名人面具，处理好相应的，一只手处理，样式改变。
