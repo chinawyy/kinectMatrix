@@ -59,5 +59,31 @@ namespace KinectHubDemo.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找类似 No ready Kinect found! 的本地化字符串。
+        /// </summary>
+        internal static string NoKinectReady {
+            get {
+                return ResourceManager.GetString("NoKinectReady", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Could not find Kinect speech recognizer. Please refer to the sample requirements. 的本地化字符串。
+        /// </summary>
+        internal static string NoSpeechRecognizer {
+            get {
+                return ResourceManager.GetString("NoSpeechRecognizer", resourceCulture);
+            }
+        }
+
+        internal static string SpeechGrammar
+        {
+            get
+            {
+                return ResourceManager.GetString("SpeechGrammar", resourceCulture);
+            }
+        }
     }
 }

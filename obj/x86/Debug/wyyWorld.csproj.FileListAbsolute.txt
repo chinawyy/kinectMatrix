@@ -9,7 +9,6 @@ C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\MainWin
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\App.g.cs
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectUserInterfaceDemo_MarkupCompile.cache
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectUserInterfaceDemo.g.resources
-C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectHubDemo.Properties.Resources.resources
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\wyyWorld.csproj.GenerateResource.Cache
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\wyyWorld.csprojResolveAssemblyReference.cache
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.dll
@@ -21,3 +20,14 @@ C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window1
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window1.g.cs
 C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window2.baml
 C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window2.g.cs
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Kinect.Toolkit.pdb
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window3.baml
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window3.g.cs
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window4.baml
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window4.g.cs
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\KinectHubDemo.Properties.Resources.resources
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window5.baml
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window5.g.cs
+C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window6.baml
+C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window6.g.cs

@@ -66,7 +66,7 @@ namespace KinectHub
             }
             else
             {
-                MessageBox.Show("没有发现任何Kinect设备");
+                MessageBox.Show("wyy没有发现任何Kinect设备");
             }
         }
 
@@ -220,20 +220,22 @@ namespace KinectHub
             //window.Show(); 
 
             //下面为window到window
-            Window1 Mn = new Window1();
-            Mn.Show();
+            Window4 Mn4 = new Window4();
+            Mn4.Show();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             //promoteButtonClickEvent("Button 2 Clicked");
-            Window2 Mn = new Window2();
-            Mn.Show();
+            Window2 Mn2 = new Window2();
+            Mn2.Show();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            promoteButtonClickEvent("Button 3 Clicked");
+            //promoteButtonClickEvent("Button 3 Clicked");
+            Window6 Mn6 = new Window6();
+            Mn6.Show();
         }
 
         private void Canvas_Loaded(object sender, RoutedEventArgs e)

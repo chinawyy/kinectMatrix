@@ -177,6 +177,7 @@ namespace KinectHubDemo
                 }
 
                 //将骨骼坐标点直接映射到彩色图像坐标点
+                /*
                 ColorImagePoint headColorPoint =
                     kinectSensorChooser1.Kinect.MapSkeletonPointToColor(first.Joints[JointType.Head].Position, ColorImageFormat.RgbResolution640x480Fps30);
                 ColorImagePoint leftColorPoint =
@@ -184,31 +185,15 @@ namespace KinectHubDemo
                 ColorImagePoint rightColorPoint =
                     kinectSensorChooser1.Kinect.MapSkeletonPointToColor(first.Joints[JointType.HandRight].Position, ColorImageFormat.RgbResolution640x480Fps30);
 
+                */
+                ColorImagePoint headColorPoint =
+                  kinectSensorChooser1.Kinect.CoordinateMapper.MapSkeletonPointToColorPoint(first.Joints[JointType.Head].Position, ColorImageFormat.RgbResolution640x480Fps30);
+                  //.MapSkeletonPointToColor(first.Joints[JointType.Head].Position, ColorImageFormat.RgbResolution640x480Fps30);
+                ColorImagePoint leftColorPoint =
+                    kinectSensorChooser1.Kinect.CoordinateMapper.MapSkeletonPointToColorPoint(first.Joints[JointType.HandLeft].Position, ColorImageFormat.RgbResolution640x480Fps30);
+                ColorImagePoint rightColorPoint =
+                    kinectSensorChooser1.Kinect.CoordinateMapper.MapSkeletonPointToColorPoint(first.Joints[JointType.HandRight].Position, ColorImageFormat.RgbResolution640x480Fps30);
 
-
-                ////将骨骼坐标点映射到深度图像坐标点
-                //DepthImagePoint headDepthPoint =
-                //    depth.MapFromSkeletonPoint(first.Joints[JointType.Head].Position);
-                //DepthImagePoint leftDepthPoint =
-                //    depth.MapFromSkeletonPoint(first.Joints[JointType.HandLeft].Position);
-                //DepthImagePoint rightDepthPoint =
-                //    depth.MapFromSkeletonPoint(first.Joints[JointType.HandRight].Position);
-                ////深度图像坐标点映射到彩色图像坐标点
-                //ColorImagePoint headColorPoint =
-                //    depth.MapToColorImagePoint(headDepthPoint.X, headDepthPoint.Y,
-                //    ColorImageFormat.RgbResolution640x480Fps30);
-                //ColorImagePoint leftColorPoint =
-                //    depth.MapToColorImagePoint(leftDepthPoint.X, leftDepthPoint.Y,
-                //    ColorImageFormat.RgbResolution640x480Fps30);
-                //ColorImagePoint rightColorPoint =
-                //    depth.MapToColorImagePoint(rightDepthPoint.X, rightDepthPoint.Y,
-                //    ColorImageFormat.RgbResolution640x480Fps30);
-
-
-                //修正为质心位置
-                //adjustCameraPosition(headImage, headColorPoint);
-                //adjustCameraPosition(leftEllipse, leftColorPoint);
-                //adjustCameraPosition(rightEllipse, rightColorPoint);
 
                 adjustCameraPosition(headImage, scalePointCoordinate(headColorPoint));
                 adjustCameraPosition(leftEllipse, scalePointCoordinate(leftColorPoint));
