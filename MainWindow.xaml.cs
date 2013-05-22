@@ -206,12 +206,9 @@ namespace KinectHub
         }
 
 
-        private void promoteButtonClickEvent(string info)
-        {
-            listBoxHoverEvent.Items.Add(string.Format("{0} : {1}", info, DateTime.Now.ToString("t")));
 
-        }
 
+        //button1:为开始游戏主界面
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             //下面三行为window到page
@@ -220,22 +217,27 @@ namespace KinectHub
             //window.Show(); 
 
             //下面为window到window
-            Window4 Mn4 = new Window4();
-            Mn4.Show();
+            Window2 Mn2 = new Window2();
+            Mn2.Show();
+            this.Close();
         }
 
+        //button2:为结束操作
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             //promoteButtonClickEvent("Button 2 Clicked");
-            Window2 Mn2 = new Window2();
-            Mn2.Show();
+            Window9 Mn9 = new Window9();
+            Mn9.Show();
+            this.Close();
+           
         }
 
+        //button3：为展示语音控制PPT图片播放
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            //promoteButtonClickEvent("Button 3 Clicked");
-            Window6 Mn6 = new Window6();
-            Mn6.Show();
+            Window8 Mn8 = new Window8();
+            Mn8.Show();
+            this.Close();
         }
 
         private void Canvas_Loaded(object sender, RoutedEventArgs e)

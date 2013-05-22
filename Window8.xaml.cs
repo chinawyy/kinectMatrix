@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -14,83 +13,83 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using System.IO;
+using Microsoft.Kinect;
 using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
-using Microsoft.Kinect;
+
 
 namespace KinectHubDemo
 {
-    //这个部分主要是基于语音识别中的页面翻转
-    /// <summary>
-    /// Window6.xaml 的交互逻辑
-    /// </summary>
-    public partial class Window6 : Window
-    {
 
+
+    public partial class Window8 : Window
+    {
         private KinectSensor _kinect;
 
         //前景用户图片对象
-        private WriteableBitmap pptmanBitmap;
-        private Int32Rect pptmanRect;
-        private int pptmanBitmapStride;
+        private WriteableBitmap WeathermanBitmap;
+        private Int32Rect WeathermanImageRect;
+        private int WeathermanBitmapStride;
 
-        //深度图像帧数组，彩色图像帧数组
-        private short[] DepthPixelData;//深度使用int
-        private byte[] ColorPixelData;//颜色使用byte
-        private bool isWindowsClosing = false;//默认创口不关闭
+        //深度图像帧数组、彩色图像帧数组
+        private short[] DepthPixelData;
+        private byte[] ColorPixelData;
+        private bool isWindowsClosing = false;
+        private SpeechRecognitionEngine _sre;
 
-        //语音识别变量：置信度处理,后面中我设置为0.75
-        private SpeechRecognitionEngine _wyy;
-
-        //对kinect的初始化处理
         private void startKinect()
         {
             if (KinectSensor.KinectSensors.Count > 0)
             {
-                _kinect = KinectSensor.KinectSensors[0];//默认选取第一个跟踪对象
-                if (_kinect == null) return;
+                //选择第一个Kinect设备
+                _kinect = KinectSensor.KinectSensors[0];
+                if (_kinect == null)
+                    return;
 
-                //采用深度摄像头和彩色摄像头,调节分辨率
+                //启用深度摄像头和彩色摄像头，为了获得更好的映射效果，彩色摄像头的分辨率恰好是深度摄像头分辨率的2倍
                 _kinect.DepthStream.Enable(DepthImageFormat.Resolution640x480Fps30);
                 _kinect.ColorStream.Enable(ColorImageFormat.RgbResolution1280x960Fps12);
                 _kinect.SkeletonStream.Enable();
 
                 //根据深度图像定义前景图片对象,指定WriteableBitmap对象高度、宽度及格式，一次性创建内存，之后只需更新像素即可
                 DepthImageStream depthStream = _kinect.DepthStream;
-                pptmanBitmap = new WriteableBitmap(depthStream.FrameWidth, depthStream.FrameHeight, 96, 96, PixelFormats.Bgra32, null);
-                pptmanRect = new Int32Rect(0, 0, (int)Math.Ceiling(pptmanBitmap.Width), (int)Math.Ceiling(pptmanBitmap.Height));
-                pptmanBitmapStride = depthStream.FrameWidth * 4;
-                pptmanImage.Source = pptmanBitmap;
+                WeathermanBitmap = new WriteableBitmap(depthStream.FrameWidth, depthStream.FrameHeight, 96, 96, PixelFormats.Bgra32, null);
+                WeathermanImageRect = new Int32Rect(0, 0, (int)Math.Ceiling(WeathermanBitmap.Width), (int)Math.Ceiling(WeathermanBitmap.Height));
+                WeathermanBitmapStride = depthStream.FrameWidth * 4;
+
 
                 DepthPixelData = new short[_kinect.DepthStream.FramePixelDataLength];
                 ColorPixelData = new byte[_kinect.ColorStream.FramePixelDataLength];
 
                 //同步深度图像和彩色图像事件
                 _kinect.AllFramesReady += new EventHandler<AllFramesReadyEventArgs>(_kinect_AllFramesReady);
+
                 _kinect.Start();
 
                 //语音命令导播切换城市
-                pptChooserViaVoice();
+                CityChooserViaVoice();
             }
             else
             {
-                MessageBox.Show("wyy没有发现任何的kinect设备");
+                MessageBox.Show("没有发现任何Kinect设备");
             }
         }
 
         void _kinect_AllFramesReady(object sender, AllFramesReadyEventArgs e)
         {
-            if (isWindowsClosing) return;
+            if (isWindowsClosing)
+                return;
+
             using (ColorImageFrame colorFrame = e.OpenColorImageFrame())
             {
                 using (DepthImageFrame depthFrame = e.OpenDepthImageFrame())
                 {
-                    pptmanTransparentPortrait(colorFrame, depthFrame);
+                    RenderWeathermanTransparentPortrait(colorFrame, depthFrame);
                 }
-            }  
+            }
         }
 
-        //关闭kinect
+
         private void stopKinect()
         {
             if (_kinect != null)
@@ -103,8 +102,8 @@ namespace KinectHubDemo
             }
         }
 
-        // 通过深度图像帧的“用户索引标志”，将深度图像帧中属于前景用户的点映射到彩色图像帧中，创建前景用户“透明图”
-        private void pptmanTransparentPortrait(ColorImageFrame colorFrame, DepthImageFrame depthFrame)
+
+        private void RenderWeathermanTransparentPortrait(ColorImageFrame colorFrame, DepthImageFrame depthFrame)
         {
             if (depthFrame != null && colorFrame != null)
             {
@@ -118,9 +117,8 @@ namespace KinectHubDemo
 
                 depthFrame.CopyPixelDataTo(DepthPixelData);
                 colorFrame.CopyPixelDataTo(ColorPixelData);
+                byte[] weathermanImage = new byte[depthFrame.Height * WeathermanBitmapStride];
 
-                byte[] pptmanImage = new byte[depthFrame.Height * pptmanBitmapStride];
-      
                 for (int depthY = 0; depthY < depthFrame.Height; depthY++)
                 {
                     for (int depthX = 0; depthX < depthFrame.Width; depthX++, playerImageIndex += bytesPerPixelOfBgrImage)
@@ -130,24 +128,20 @@ namespace KinectHubDemo
 
                         //用户索引标志不为零，则代表该处属于人体部位
                         if (playerIndex != 0)
-                        { //将深度图像中的某一个点坐标映射到彩色图像坐标点上
+                        {
+                            //将深度图像中的某一个点坐标映射到彩色图像坐标点上
                             colorPoint = _kinect.MapDepthToColorImagePoint(depthFrame.Format, depthX, depthY, DepthPixelData[depthPixelIndex], colorFrame.Format);
-                             
+                            //colorPoint = _kinect.CoordinateMapper.MapDepthPointToColorPoint(depthFrame,DepthImagePoint,colorFrame.Format);
                             colorPixelIndex = (colorPoint.X * colorFrame.BytesPerPixel) + (colorPoint.Y * colorStride);
 
-
-                            pptmanImage[playerImageIndex] = ColorPixelData[colorPixelIndex];         //Blue    
-                            pptmanImage[playerImageIndex + 1] = ColorPixelData[colorPixelIndex + 1];  //Green
-                            pptmanImage[playerImageIndex + 2] = ColorPixelData[colorPixelIndex + 2];   //Red
-                            pptmanImage[playerImageIndex + 3] = 0xFF;                                 //Alpha
                         }
                     }
                 }
-                pptmanBitmap.WritePixels(pptmanRect, pptmanImage, pptmanBitmapStride, 0);
+
+                WeathermanBitmap.WritePixels(WeathermanImageRect, weathermanImage, WeathermanBitmapStride, 0);
             }
         }
 
-        //语音识别函数
         private static RecognizerInfo GetKinectRecognizer()
         {
             Func<RecognizerInfo, bool> matchingFunc = r =>
@@ -159,11 +153,12 @@ namespace KinectHubDemo
             return SpeechRecognitionEngine.InstalledRecognizers().Where(matchingFunc).FirstOrDefault();
         }
 
-        //具体的哪张PPT的识别
-        private void pptChooserViaVoice()
+
+
+        private void CityChooserViaVoice()
         {
-            // 等待5秒钟时间，让Kinect传感器初始化启动完成
-            System.Threading.Thread.Sleep(5000);
+            // 等待4秒钟时间，让Kinect传感器初始化启动完成
+            System.Threading.Thread.Sleep(4000);
 
             // 获取Kinect音频对象
             KinectAudioSource source = _kinect.AudioSource;
@@ -178,81 +173,88 @@ namespace KinectHubDemo
                 return;
             }
 
-            _wyy = new SpeechRecognitionEngine(ri.Id);
+            _sre = new SpeechRecognitionEngine(ri.Id);
 
-            //添加多张PPT。
-            var ppts = new Choices();
-            ppts.Add("1");
-            ppts.Add("2");
-            ppts.Add("3");
-            ppts.Add("4");
+            // 示例，添加上海、北京两个城市
+            var cities = new Choices();
+            cities.Add("one");
+            cities.Add("two");
+            cities.Add("threee");
+            cities.Add("four");
+            cities.Add("five");
+            cities.Add("six");
+            cities.Add("seven");
+            cities.Add("stop");
             var gb = new GrammarBuilder { Culture = ri.Culture };
-            //创建语法对象
-            gb.Append(ppts);
-            var g = new Grammar(gb);//根据语音区域，创建语法识别对象
-            _wyy.LoadGrammar(g);//加载进语音识别引擎
-            //注册事件,有效语音命令识别,疑似识别,无效识别
-            _wyy.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(wyy_SpeechRecognized);
-            _wyy.SpeechHypothesized += new EventHandler<SpeechHypothesizedEventArgs>(wyy_SpeechHypothesized);
-            _wyy.SpeechRecognitionRejected += new EventHandler<SpeechRecognitionRejectedEventArgs>(wyy_SpeechRecognitionRejected);
 
-            //初始化并且启动Kinect音频流
+            // 创建语法对象                                
+            gb.Append(cities);
+
+            //根据语言区域，创建语法识别对象
+            var g = new Grammar(gb);
+
+            // 将这些语法规则加载进语音识别引擎
+            _sre.LoadGrammar(g);
+
+            // 注册事件：有效语音命令识别、疑似识别、无效识别
+            _sre.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(sre_SpeechRecognized);
+            _sre.SpeechHypothesized += new EventHandler<SpeechHypothesizedEventArgs>(sre_SpeechHypothesized);
+            _sre.SpeechRecognitionRejected += new EventHandler<SpeechRecognitionRejectedEventArgs>(sre_SpeechRecognitionRejected);
+
+            // 初始化并启动 Kinect音频流
             Stream s = source.Start();
-            _wyy.SetInputToAudioStream(
+            _sre.SetInputToAudioStream(
                 s, new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1, 32000, 2, null));
+
             // 异步开启语音识别引擎，可识别多次
-            _wyy.RecognizeAsync(RecognizeMode.Multiple);
-
+            _sre.RecognizeAsync(RecognizeMode.Multiple);
         }
 
-        void wyy_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)
+        void sre_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
             //throw new NotImplementedException();
         }
 
-        void wyy_SpeechHypothesized(object sender, SpeechHypothesizedEventArgs e)
+        void sre_SpeechHypothesized(object sender, SpeechHypothesizedEventArgs e)
         {
             //throw new NotImplementedException();
         }
 
-        void wyy_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        /// <summary>
+        /// 语音命令识别处理，切换天气预报背景城市图片
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Confidence >= 0.6)
+            //语音识别信心度超过70%
+            if (e.Result.Confidence >= 0.7)
             {
-                String ppt = e.Result.Text.ToLower();
-                if (ppt == "1")
+                string city = e.Result.Text.ToLower();
+                if (city == "one")
                 {
-                    String pptMap = "pack://application:,,,Resources/images/back1.jpg";
-                    pptImage.Source = new BitmapImage(new Uri(pptMap));
+                    string cityMap = "pack://application:,,,/Resources/images/back1.jpg";
+                    CityImage.Source = new BitmapImage(new Uri(cityMap));
                 }
-                else if (ppt == "2")
+                else if (city == "two")
                 {
-                    String pptMap = "pack://application:,,,Resources/images/back2.jpg";
-                    pptImage.Source = new BitmapImage(new Uri(pptMap));
+                    string cityMap = "pack://application:,,,/Resources/images/back2.jpg";
+                    CityImage.Source = new BitmapImage(new Uri(cityMap));
                 }
-                else if (ppt == "3")
+                else if (city == "stop")
                 {
-                    String pptMap = "pack://application:,,,Resources/images/back3.jpg";
-                    pptImage.Source = new BitmapImage(new Uri(pptMap));
+                    //Window_Closing();
+                    this.Close();
                 }
-                else if (ppt == "4")
-                {
-                    String pptMap = "pack://application:,,,Resources/images/back4.jpg";
-                    pptImage.Source = new BitmapImage(new Uri(pptMap));
-                }
-               // else//默认的空PPT
-               // {
-               //     pptMap = "pack://application:,,,Resources/images/back0.jpg";
-               // }
-                //pptImage.Source = new BitmapImage(new Uri(pptMap));
             }
         }
 
-        public Window6()
+
+        public Window8()
         {
             InitializeComponent();
         }
-        //封转kinect的开启和关闭
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             startKinect();
@@ -263,5 +265,6 @@ namespace KinectHubDemo
             isWindowsClosing = true;
             stopKinect();
         }
+
     }
 }

@@ -26,16 +26,15 @@
                     <ImageBrush ImageSource="/KinectUserInterfaceDemo;component/Resources/images/end.jpg" />
                 </Button.Background>
             </Button>
-            <Button Canvas.Left="853" Canvas.Top="112" Height="300" Name="button3" Width="335" 
+            <Button Canvas.Left="41" Canvas.Top="435" Height="300" Name="button3" Width="335" 
 		HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Click="button3_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/KinectUserInterfaceDemo;component/Resources/images/explore.jpg" />
                 </Button.Background>
             </Button>
 
-            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="textTip" Text="The current scenery" Width="289" Canvas.Left="899" Canvas.Top="451" />
-            <Image Name="videoImage" Height="166" Width="289" Canvas.Left="899" Canvas.Top="491"></Image>
-            <ListBox Canvas.Left="41" Canvas.Top="464" Height="128" Name="listBoxHoverEvent" Width="339" Background="#FF1E1C37" Foreground="#FF20ED16" />
+            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="textTip" Text="The current scenery" Width="289" Canvas.Left="474" Canvas.Top="466" />
+            <Image Name="videoImage" Height="769" Width="441" Canvas.Left="831" Canvas.Top="0"/>
         </Canvas>
     </Grid>
 

@@ -103,6 +103,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FallingShapes.cs" />
+    <Compile Include="FallingThings.cs" />
+    <Compile Include="FlyingText.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="SpeechRecognizer.cs" />
     <Compile Include="step1.xaml.cs">
       <DependentUpon>step1.xaml</DependentUpon>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="Window6.xaml.cs">
       <DependentUpon>Window6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window8.xaml.cs">
+      <DependentUpon>Window8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window9.xaml.cs">
+      <DependentUpon>Window9.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +173,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Window6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -244,6 +264,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SpeechGrammar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\back2.jpg" />
+    <Resource Include="Resources\images\back3.jpg" />
+    <Resource Include="Resources\images\back4.jpg" />
+    <Resource Include="Resources\images\back0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hit-2.wav" />
+    <Resource Include="Images\beijing.jpg" />
+    <Resource Include="Images\China-Weather-Forecast.jpg" />
+    <Resource Include="Images\shanghai.jpg" />
+    <Resource Include="Images\CheckedHover.png" />
+    <Resource Include="Images\CheckedNormal.png" />
+    <Resource Include="Images\UncheckedHover.png" />
+    <Resource Include="Images\UncheckedNormal.png" />
+    <Content Include="Pop-5.wav" />
+    <Resource Include="readme.txt" />
+    <Content Include="Squeeze.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
