@@ -5,8 +5,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="名人体验" Height="800" Width="1280" xmlns:my="clr-namespace:Microsoft.Samples.Kinect.WpfViewers;assembly=Microsoft.Samples.Kinect.WpfViewers" Loaded="Window_Loaded" Closing="Window_Closing">
     <Canvas Name="MainCanvas">
-        <my:KinectColorViewer Canvas.Left="0" Canvas.Top="0" Name="kinectColorViewer1" Height="800" Width="1280" Kinect="{Binding}" />
-        <my:KinectSensorChooser Canvas.Left="188" Canvas.Top="185" Name="kinectSensorChooser1" Width="328" />
+        <my:KinectColorViewer Canvas.Left="0" Canvas.Top="0" Name="kinectColorViewer1" Height="800" Width="1280"/>
+       
         <Ellipse Canvas.Left="10" Canvas.Top="10" Fill="#FF4D298D" Height="50" Name="leftEllipse" Opacity="1" Stroke="White" Width="50" />
         <Ellipse Canvas.Left="110" Canvas.Top="10" Fill="#FF2CACE3" Height="50" Name="rightEllipse" Opacity="1" Stroke="White" Width="50" />
         <Image Canvas.Left="79" Canvas.Top="91" Height="96" Name="headImage" Source="/KinectUserInterfaceDemo;component/Resources/images/face001.png" Stretch="Fill" Width="81" />

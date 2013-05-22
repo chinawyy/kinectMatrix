@@ -22,5 +22,34 @@ namespace KinectHubDemo.Properties {
                 return defaultInstance;
             }
         }
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0,0,0,0")]
+        public global::System.Windows.Rect PrevWinPosition
+        {
+            get
+            {
+                return ((global::System.Windows.Rect)(this["PrevWinPosition"]));
+            }
+            set
+            {
+                this["PrevWinPosition"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int WindowState
+        {
+            get
+            {
+                return ((int)(this["WindowState"]));
+            }
+            set
+            {
+                this["WindowState"] = value;
+            }
+        }
     }
 }

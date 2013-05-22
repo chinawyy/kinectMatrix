@@ -32,9 +32,14 @@
                     <ImageBrush ImageSource="/KinectUserInterfaceDemo;component/Resources/images/explore.jpg" />
                 </Button.Background>
             </Button>
-
-            <TextBlock FontSize="24" Foreground="White" Height="35" x:Name="textTip" Text="The current scenery" Width="289" Canvas.Left="474" Canvas.Top="466" />
+            <Button Canvas.Left="455" Canvas.Top="435" Height="300" x:Name="button4" Width="335" 
+        HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"  Click="button4_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/images/yuyin.jpg" />
+                </Button.Background>
+            </Button>
             <Image Name="videoImage" Height="769" Width="441" Canvas.Left="831" Canvas.Top="0"/>
+          
         </Canvas>
     </Grid>
 

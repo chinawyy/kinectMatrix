@@ -69,9 +69,16 @@
     <Reference Include="Microsoft.Kinect.Toolkit">
       <HintPath>..\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Kinect.Toolkit.FaceTracking">
+      <HintPath>..\Microsoft.Kinect.Toolkit.FaceTracking\bin\x86\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Samples.Kinect.SwipeGestureRecognizer, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Microsoft.Samples.Kinect.SwipeGestureRecognizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Samples.Kinect.WpfViewers, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\KinectWpfViewers\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -115,8 +122,8 @@
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window2.xaml.cs">
-      <DependentUpon>Window2.xaml</DependentUpon>
+    <Compile Include="Window10.xaml.cs">
+      <DependentUpon>Window10.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window3.xaml.cs">
       <DependentUpon>Window3.xaml</DependentUpon>
@@ -156,7 +163,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Window2.xaml">
+    <Page Include="Window10.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -252,12 +259,6 @@
     <Resource Include="Resources\images\face003.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dependencies\KinectWpfViewers\Microsoft.Samples.Kinect.WpfViewers.csproj">
-      <Project>{4de23893-27e7-423f-9bb6-ba21dac2c45e}</Project>
-      <Name>Microsoft.Samples.Kinect.WpfViewers</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Kinect.ico" />
     <Resource Include="Images\Logo.png" />
     <Resource Include="Images\Status.png" />
@@ -273,6 +274,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hit-2.wav" />
+    <Content Include="wyy2.wma" />
     <Resource Include="Images\beijing.jpg" />
     <Resource Include="Images\China-Weather-Forecast.jpg" />
     <Resource Include="Images\shanghai.jpg" />
@@ -282,6 +284,11 @@
     <Resource Include="Images\UncheckedNormal.png" />
     <Content Include="Pop-5.wav" />
     <Resource Include="readme.txt" />
+    <Resource Include="Resources\images\yuyin.jpg" />
+    <Content Include="Resources\musci1.mp3" />
+    <Content Include="Resources\wyy1.wav" />
+    <Content Include="Resources\wyy2.wma" />
+    <Content Include="wyy1.wav" />
     <Content Include="Squeeze.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

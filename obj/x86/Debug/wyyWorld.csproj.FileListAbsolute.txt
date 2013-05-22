@@ -18,8 +18,6 @@ C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\step1.b
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\step1.g.cs
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window1.baml
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window1.g.cs
-C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window2.baml
-C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window2.g.cs
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Kinect.Toolkit.dll
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Kinect.Toolkit.pdb
 C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window3.baml
@@ -36,3 +34,7 @@ C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window8
 C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window8.g.cs
 C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window9.baml
 C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\obj\x86\Debug\Window9.g.cs
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window10.baml
+C:\Users\yy\Documents\Visual Studio 2012\Projects\wyyWorld\obj\x86\Debug\Window10.g.cs
+C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll
+C:\Users\yy\documents\visual studio 2012\Projects\wyyWorld\bin\Debug\Microsoft.Kinect.Toolkit.FaceTracking.pdb

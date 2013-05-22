@@ -9,7 +9,12 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hit-2.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wyy2.wma")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pop-5.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/musci1.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/wyy1.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/wyy2.wma")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wyy1.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("squeeze.wav")]
 
 

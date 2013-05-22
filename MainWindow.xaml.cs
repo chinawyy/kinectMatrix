@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
+using System.Media; 
 
 using Coding4Fun.Kinect.Wpf;
 using Coding4Fun.Kinect.Wpf.Controls;
@@ -151,6 +152,7 @@ namespace KinectHub
 			        button1,
 					button2,
 					button3,
+                    button4//语音播放
 			    };
         }
 
@@ -217,19 +219,18 @@ namespace KinectHub
             //window.Show(); 
 
             //下面为window到window
-            Window2 Mn2 = new Window2();
-            Mn2.Show();
-            this.Close();
+            Window10 Mn10 = new Window10();
+            Mn10.Show();
+            //this.Close();
         }
 
         //button2:为结束操作
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             //promoteButtonClickEvent("Button 2 Clicked");
-            Window9 Mn9 = new Window9();
-            Mn9.Show();
-            this.Close();
-           
+            //Window9 Mn9 = new Window9();
+            //Mn9.Show();
+            this.Close();  
         }
 
         //button3：为展示语音控制PPT图片播放
@@ -237,7 +238,25 @@ namespace KinectHub
         {
             Window8 Mn8 = new Window8();
             Mn8.Show();
-            this.Close();
+            //this.Close();
+        }
+
+        //button4:语音播放录音,播放声音文件的路径
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer mp = new MediaPlayer();
+            var uri = new Uri("pack://application:,,,/KinectUserInterfaceDemo;component/Resources/wyy2.wav");
+            mp.Open(uri);
+            mp.Play();
+
+            //MediaPlayer player = new MediaPlayer();
+            //player.Open(new Uri("/Resouces/music1.mp3", UriKind.Relative));
+            //player.Play();
+
+            //SoundPlayer player = new SoundPlayer();
+            //string location = "/KinectUserInterfaceDemo;component/Resources/wyy1.wav";
+            //player.SoundLocation = location;
+            //player.Play();
         }
 
         private void Canvas_Loaded(object sender, RoutedEventArgs e)
@@ -261,6 +280,7 @@ namespace KinectHub
         {
             InitializeButtons();
             startKinect();
+            System.Media.SoundPlayer Audio = new System.Media.SoundPlayer("wyy2.wav");  
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

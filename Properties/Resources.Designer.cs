@@ -22,6 +22,8 @@ namespace KinectHubDemo.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    
+    
     internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
@@ -83,6 +85,50 @@ namespace KinectHubDemo.Properties {
             get
             {
                 return ResourceManager.GetString("SpeechGrammar", resourceCulture);
+            }
+        }
+
+        public static System.IO.UnmanagedMemoryStream Hit_2
+        {
+            get
+            {
+                return ResourceManager.GetStream("Hit_2", resourceCulture);
+            }
+        }
+
+        public static System.IO.UnmanagedMemoryStream Pop_5
+        {
+            get
+            {
+                return ResourceManager.GetStream("Pop_5", resourceCulture);
+            }
+        }
+
+        public static System.Drawing.Icon ShapeGame
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("ShapeGame", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+
+        public static System.IO.UnmanagedMemoryStream Squeeze
+        {
+            get
+            {
+                return ResourceManager.GetStream("Squeeze", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Say something out loud to control the game!     Say colors and shapes like: &quot;Green Circles&quot;   &quot;Yellow Stars&quot;   &quot;Black Triangles&quot;   &quot;All Colors&quot;     Or say commands like: &quot;Speed Up&quot;   &quot;Slow Down&quot;   &quot;Bigger&quot;   &quot;Smaller&quot;   &quot;Stop&quot;   &quot;Go&quot;   &quot;Giant&quot;        Or say &quot;Reset&quot; to start over!.
+        /// </summary>
+        public static string Vocabulary
+        {
+            get
+            {
+                return ResourceManager.GetString("Vocabulary", resourceCulture);
             }
         }
     }
